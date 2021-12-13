@@ -1,0 +1,10 @@
+@import "/src/common/styles/colors";
+@import "/src/common/styles/variables";
+
+%header {
+  padding: 4rem 0;
+  color: $light-color;
+  font-size: 4rem;
+  font-weight: $bold-weight;
+  text-align: center;
+}

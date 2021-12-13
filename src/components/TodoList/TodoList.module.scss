@@ -1,0 +1,16 @@
+@import "/src/common/styles/colors";
+@import "/src/common/styles/variables";
+@import "/src/common/styles/templates";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background: $todo-bg-color-1;
+  background: linear-gradient(106deg, $todo-bg-color-1 0%, $todo-bg-color-2 100%);
+}
+
+.header {
+  @extend %header;
+  text-shadow: 0px 0px 30px $light-color;
+}
