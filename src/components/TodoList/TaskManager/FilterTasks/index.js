@@ -5,7 +5,7 @@ const filterState = ['All', 'In progress', 'Done'];
 
 export default function FilterTasks() {
   return (
-    <div class={styles.container}>
+    <div className={styles.container}>
       <select className={styles.filter}>{
         filterState.map((value, index) =>
           <option value={index} key={index}>{value}</option>

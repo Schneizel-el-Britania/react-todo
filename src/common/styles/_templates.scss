@@ -13,5 +13,13 @@
   padding: $input-padding;
   width: $width;
   height: $todo-item-height;
-  border: 0.1px solid $todo-dark-color;
+  border: none;
+  background-color: $light-color;
+}
+
+@mixin button($bg-color) {
+  width: $todo-item-height / 1.2;
+  height: $todo-item-height;
+  background-color: $bg-color;
+  color: $light-color;
 }

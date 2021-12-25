@@ -16,9 +16,7 @@
   &::after {
     content: "▼";
     pointer-events: none;
-    
-    width: $todo-item-height / 1.5;
-    height: $todo-item-height;
+    @include button($todo-dark-color);
 
     display: flex;
     justify-content: center;
@@ -29,8 +27,6 @@
     transform: translateY(-50%);
     right: 0;
 
-    background-color: $todo-dark-color;
-    color: $light-color;
     font-size: 1.2rem;
     vertical-align: middle;
   }

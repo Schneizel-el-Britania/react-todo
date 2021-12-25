@@ -4,10 +4,10 @@ import FilterTasks from './FilterTasks';
 
 import styles from './TaskManager.module.scss';
 
-export default function TaskManager() {
+export default function TaskManager(props) {
   return (
     <article className={styles.container}>
-      <AddTask />
+      <AddTask setTasks={props.setTasks}/>
       <FilterTasks />
     </article>
   )

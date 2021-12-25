@@ -5,27 +5,32 @@ import { TODO_SCHEMA } from '../../../../utils/validationSchema';
 import styles from './AddTask.module.scss';
 
 const initialValues = {
-  addTask: "",
+  newTask: "",
 }
 
-export default function AddTask() {
+export default function AddTask(props) {
+  const onSubmit = (item, formikBab) => {
+    props.setTasks((tasks) => ([
+      ...tasks,
+      {
+        value: item.newTask,
+        checked: false,
+      },
+    ]));
+  formikBab.resetForm();
+}
 
-  const onSubmit = (values, formikBab) => {
-    console.log('values:', values);
-    formikBab.resetForm();
-  }
-
-  return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={TODO_SCHEMA}>
-      <Form className={styles.formContainer}>
-        <label>
-          <Field name="addTask" className={styles.inputTask} />
-          <ErrorMessage name="addTask" component='div' className={styles.error} />
-        </label>
-        <button type="submit" className={styles.addBox} >
-          <AddBoxIcon />
-        </button>
-      </Form>
-    </Formik>
-  )
+return (
+  <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={TODO_SCHEMA}>
+    <Form className={styles.formContainer}>
+      <label>
+        <Field name="newTask" className={styles.inputTask} />
+        <ErrorMessage name="newTask" component='div' className={styles.error} />
+      </label>
+      <button type="submit" className={styles.addBox} >
+        <AddBoxIcon />
+      </button>
+    </Form>
+  </Formik>
+)
 }

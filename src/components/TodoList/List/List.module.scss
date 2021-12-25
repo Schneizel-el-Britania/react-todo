@@ -1,0 +1,35 @@
+@import "/src/common/styles/variables";
+@import "/src/common/styles/colors";
+@import "/src/common/styles/templates";
+
+.list {
+  width: fit-content;
+  margin: auto;
+  margin-top: 10vh;
+
+  & > li {
+    @include input-item(20vw);
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & > li + li {
+    margin-top: 1rem;
+  }
+}
+
+.checkBtn{
+  @include button($todo-bg-color-1);
+  border: none;
+}
+
+.deleteBtn{
+  @include button($todo-dark-color);
+  border: none;
+}
+
+.checked{
+  text-decoration: line-through;
+  filter: brightness(90%);
+}
