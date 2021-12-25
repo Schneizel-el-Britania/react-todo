@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FilterTasks.module.scss'
 
-const filterState = ['All', 'Progress', 'Done'];
+const filterState = ['All', 'In progress', 'Done'];
 
 export default function FilterTasks() {
   return (

@@ -11,6 +11,7 @@
 
 .container {
   display: inline-block;
+  vertical-align: top;
   position: relative;
   &::after {
     content: "▼";
