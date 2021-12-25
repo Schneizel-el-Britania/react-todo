@@ -1,22 +1,21 @@
 @import "/src/common/styles/variables";
-
-$input-padding: 1rem;
+@import "/src/common/styles/colors";
+@import "/src/common/styles/templates";
 
 .formContainer {
-  width: 30vw;
   display: inline-block;
   position: relative;
 }
 
 .inputTask {
-  padding: $input-padding;
-  width: 100%;
-  height: $todo-item-height;
+  @include input-item(30vw);
 }
 
 .formContainer .addBox {
   height: $todo-item-height;
+  color: $todo-dark-color;
   font-size: $todo-item-height / 2;
+
   position: absolute;
   top: 0;
   right: $input-padding;

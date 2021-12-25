@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styles from './FilterTasks.module.scss'
+
+const filterState = ['All', 'Progress', 'Done'];
 
 export default function FilterTasks() {
   return (
-    <div>
-      test
+    <div class={styles.container}>
+      <select className={styles.filter}>{
+        filterState.map((value, index) =>
+          <option value={index} key={index}>{value}</option>
+        )
+      }</select>
     </div>
   )
 }

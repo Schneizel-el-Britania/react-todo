@@ -1,0 +1,36 @@
+@import "/src/common/styles/variables";
+@import "/src/common/styles/colors";
+@import "/src/common/styles/templates";
+
+.filter {
+  margin-left: 1rem;
+  @include input-item(10vw);
+  appearance: none;
+  background-color: white;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: "▼";
+    pointer-events: none;
+    
+    width: $todo-item-height / 1.5;
+    height: $todo-item-height;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    background-color: $todo-dark-color;
+    color: $light-color;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+}

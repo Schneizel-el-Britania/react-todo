@@ -1,6 +1,5 @@
 import React from 'react';
 import AddBoxIcon from '@material-ui/icons/AddBox';
-
 import styles from './AddTask.module.scss';
 
 export default function AddTask() {

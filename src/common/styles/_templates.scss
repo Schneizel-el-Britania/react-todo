@@ -8,3 +8,10 @@
   font-weight: $bold-weight;
   text-align: center;
 }
+
+@mixin input-item($width) {
+  padding: $input-padding;
+  width: $width;
+  height: $todo-item-height;
+  border: 0.1px solid $todo-dark-color;
+}
