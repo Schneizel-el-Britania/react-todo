@@ -1,14 +1,14 @@
 import React from 'react';
+import { FILTER_STATE } from '../../constants';
 import styles from './FilterTasks.module.scss'
 
-const filterState = ['All', 'In progress', 'Done'];
-
-export default function FilterTasks() {
+export default function FilterTasks(props) {
+  const handleFilter = (event) => props.setFilter(event.target.value);
   return (
     <div className={styles.container}>
-      <select className={styles.filter}>{
-        filterState.map((value, index) =>
-          <option value={index} key={index}>{value}</option>
+      <select className={styles.filter} onChange={handleFilter}>{
+        FILTER_STATE.map((_, index) =>
+          <option value={FILTER_STATE[index]} key={index}>{FILTER_STATE[index]}</option>
         )
       }</select>
     </div>
